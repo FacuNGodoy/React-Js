@@ -3,7 +3,7 @@ import './ItemListContainer.css'
 
 const ItemListContainer = () => {
   return (
-    <Titulo greeting="Pokemon"/>
+    <Titulo greeting="Pokémon"/>
   )
 }
 
