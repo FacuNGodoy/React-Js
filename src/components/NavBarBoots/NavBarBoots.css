@@ -1,0 +1,48 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.aaa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar{
+    background-color: #fec10c;
+    margin: 0px;
+    padding: 0px;
+}
+
+.pokemon-logo{
+    height: 100px;
+}
+
+.nav-link{
+    font-size: 25px;
+    margin: 0px 25px;
+}
+
+.carrito-logo{
+    height: 50px;
+    margin: 0px 25px;
+}
+
+.boton-login{
+    display: flex;
+    align-items: center;
+}
+
+.login{
+    font-size: 23px;
+    color: #25439d;
+    align-items: center;
+    background-color: #fec10c;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-color: #25439d;
+    border-width: 5px;
+}
