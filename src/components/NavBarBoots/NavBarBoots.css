@@ -14,6 +14,12 @@
     background-color: #fec10c;
     margin: 0px;
     padding: 0px;
+    display: block;
+}
+
+@font-face {
+    font-family: "pokemon";
+    src: url(../../Assets/Font/PokemonGb-RAeo.ttf);
 }
 
 .pokemon-logo{
@@ -21,22 +27,18 @@
 }
 
 .nav-link{
-    font-size: 25px;
+    font-size: 22px;
     margin: 0px 25px;
+    font-family: "pokemon";
 }
 
 .carrito-logo{
-    height: 50px;
+    height: 40px;
     margin: 0px 25px;
 }
 
-.boton-login{
-    display: flex;
-    align-items: center;
-}
-
 .login{
-    font-size: 23px;
+    font-size: 15px;
     color: #25439d;
     align-items: center;
     background-color: #fec10c;
@@ -45,4 +47,5 @@
     cursor: pointer;
     border-color: #25439d;
     border-width: 5px;
+    font-family: "pokemon";
 }
