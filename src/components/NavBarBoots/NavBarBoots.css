@@ -30,6 +30,7 @@
     font-size: 22px;
     margin: 0px 25px;
     font-family: "pokemon";
+    cursor: pointer;
 }
 
 .carrito-logo{

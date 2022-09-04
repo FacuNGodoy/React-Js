@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "pokemon";
+    src: url(../../Assets/Font/PokemonGb-RAeo.ttf);
+}
+
+.item-Card-Total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 40px ;
+}
+
+.item-Card{
+    background-color: white;
+    border-color: black;
+    border-width: 12px;
+    border-style: double;
+    width: 250px;
+    height: 400px;
+}
+
+.item-Img-Cont{
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-Img{
+    height: 75%;
+    margin: 20px;
+}
+
+.item-Tit{
+    color: black;
+    font-family: "pokemon";
+    padding-top: 20px;
+    font-size: 20px;
+    height: 15%;
+}
+
+.item-Desc{
+    color: black;
+    font-family: "pokemon";
+    font-size: 15px;
+    height: 25%;
+}
+

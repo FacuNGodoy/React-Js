@@ -1,0 +1,21 @@
+.carrito-Num{
+    color: black;
+    font-family: "pokemon";
+    font-size: 30px;
+}
+
+
+.contador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.carrito-Bot{
+    font-family: "pokemon";
+    border-radius: 8px;
+    border-width: 5px;
+    font-size: 20px;
+    width: 50px;
+}
