@@ -1,10 +1,29 @@
-import Titulo from "../Titulo/Titulo"
-import './ItemListContainer.css'
+import data from "../Data/Data.js";
+import {useEffect, useState} from "react";
+import ItemList from "../ItemList/ItemList.js";
 
-const ItemListContainer = () => {
-  return (
-    <Titulo greeting="Pokémon"/>
-  )
-}
+const ItemListContainer = ({}) => {
+  const [productList, setProductList] = useState([]);
 
-export default ItemListContainer
+  useEffect(() => {
+    getProducts.then((response) => {
+      setProductList(response)
+    })
+  }, []);
+
+const getProducts = 
+  new Promise ((resolve, reject) => {
+    setTimeout(() => {
+      resolve(data);
+    }, 2000);
+  });
+
+
+  return(
+    <>
+      <ItemList lista={productList}/>
+    </>
+  );
+};
+
+export default ItemListContainer;
