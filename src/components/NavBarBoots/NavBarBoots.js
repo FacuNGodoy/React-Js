@@ -8,9 +8,9 @@ const NavBarBoots = () => {
        <div class="aaa">
             <LogoPokemon />
             {/* <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> */}
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    <a class="nav-link" href="#">Shop</a>
+                <div className="navbar-nav">
+                    <a className="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a className="nav-link" href="#">Shop</a>
                     <img src={carrito} className="carrito-logo" alt="logo" />
                 </div>
             {/* </div> */}
