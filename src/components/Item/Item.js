@@ -10,7 +10,7 @@ const Item = ({title, desc, image}) =>{
                 </div>
                 <h2 className="item-Tit">{title}</h2>
                 <p className="item-Desc">{desc}</p>
-                <Counter/>
+                <button className="item-bot">Detalles</button>
             </div>
         </div>
     )

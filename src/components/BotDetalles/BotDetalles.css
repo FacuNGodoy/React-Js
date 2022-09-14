@@ -1,0 +1,7 @@
+.item-bot{
+    font-family: "pokemon";
+    padding: 10px;
+    border-width: 4px;
+    /* border-radius: 15px; */
+    border-style: dashed;
+}

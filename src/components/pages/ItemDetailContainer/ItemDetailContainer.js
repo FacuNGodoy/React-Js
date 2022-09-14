@@ -1,11 +1,12 @@
-import data from "../Data/Data";
+import data from "../../Data/Data";
 import { useEffect, useState } from "react";
-import ItemDetail from "../ItemDetail/ItemDetail";
+import ItemDetail from "../../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
+    const {id} = useParams();
+    
     const [itemDetailList, setItemDetailList] = useState([]);
-
-    let id = '2'
 
     useEffect(() =>{
         getItem.then((Response) =>{
@@ -17,10 +18,9 @@ const ItemDetailContainer = () => {
         new Promise((resolve, reject) => {
             setTimeout(()=>{
                 resolve(data.find((detail) => detail.id === id));
-        },2000)
+        },1000)
         });
     
-        
     return(
         <>
             <ItemDetail list={itemDetailList}/>

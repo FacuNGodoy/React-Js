@@ -1,19 +1,26 @@
 import logo from './logo.png';
 import './App.css';
 import NavBarBoots from './components/NavBarBoots/NavBarBoots';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemListContainer from './components/pages/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/pages/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <NavBarBoots/>
-      <ItemListContainer />
+      <Routes>
+        <Route path="/" element={<ItemListContainer />}/>
+        <Route path="/category/:category" element={<ItemListContainer/>} />
+        <Route path="/category/:category" element={<div>Shop</div>} />
+        <Route path="/category/:category" element={<div>Shop</div>} />
+        <Route path="/item/:id" element={<ItemDetailContainer/>} />
+      </Routes>
       <header className="App-header">
-        <ItemDetailContainer />
+        {/* <ItemDetailContainer /> */}
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-    </div>
+    </BrowserRouter>
   );
 }
 
