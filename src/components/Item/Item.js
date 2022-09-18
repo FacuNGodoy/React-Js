@@ -1,7 +1,7 @@
-import Counter from '../Counter/Counter'
 import './Item.css'
+import { Link } from 'react-router-dom'
 
-const Item = ({title, desc, image}) =>{
+const Item = ({title, desc, image, id}) =>{
     return(
         <div className='item-Card-Total'>
             <div className="item-Card">
@@ -10,7 +10,9 @@ const Item = ({title, desc, image}) =>{
                 </div>
                 <h2 className="item-Tit">{title}</h2>
                 <p className="item-Desc">{desc}</p>
-                <button className="item-bot">Detalles</button>
+                <Link to={'/item/' + id}>
+                    <button className="item-bot" >Detalles</button>
+                </Link>
             </div>
         </div>
     )

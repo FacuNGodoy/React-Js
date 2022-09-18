@@ -1,9 +1,7 @@
-import {useState} from "react"
 import './Counter.css'
 
-const Counter = () => {
+const Counter = ({carrito, setCarrito}) => {
     const stock = 10
-    const [carrito, setCarrito] = useState(0)
 
     const sumar = () => carrito <= stock -1 ? setCarrito(carrito + 1) : alert(`Se alcanzó el máximo de stock.`)
     const restar = () => carrito > 0 ? setCarrito(carrito - 1) : alert(`El número debe ser positivo.`)

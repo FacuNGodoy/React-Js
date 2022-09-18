@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const NavBarBoots = () => {
   return (
-    <nav class="navbar navbar-expand-lg">
-       <div class="aaa">
+    <nav className="navbar navbar-expand-lg">
+       <div className="aaa">
             <LogoPokemon />
             {/* <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> */}
                 <div className="navbar-nav">
