@@ -11,9 +11,9 @@ const NavBarBoots = () => {
             {/* <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> */}
                 <div className="navbar-nav">
                     <Link className="nav-link active" to={'/'}>Inicio</Link>
-                    <Link className="nav-link" to={'/category/comun'}>Comun</Link>
-                    <Link className="nav-link" to={'/category/raro'}>Raro</Link>
-                    <Link className="nav-link" to={'/category/ultraRaro'}>UltraRaro</Link>
+                    <Link className="nav-link active" to={'/category/comun'}>Comun</Link>
+                    <Link className="nav-link active" to={'/category/raro'}>Raro</Link>
+                    <Link className="nav-link active" to={'/category/ultraRaro'}>UltraRaro</Link>
                     <img src={carrito} className="carrito-logo" alt="logo" />
                 </div>
             {/* </div> */}

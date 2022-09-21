@@ -61,5 +61,10 @@
 
 .contador-Desc{
     padding: 20px 0px;
-
+}
+.BotVolver{
+    font-family: "pokemon";
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
 }

@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
         new Promise((resolve, reject) => {
             setTimeout(()=>{
                 resolve(data.find((detail) => detail.id === id));
-        },1000)
+        },500)
         });
     
     return(

@@ -4,7 +4,7 @@ const Counter = ({carrito, setCarrito}) => {
     const stock = 10
 
     const sumar = () => carrito <= stock -1 ? setCarrito(carrito + 1) : alert(`Se alcanzó el máximo de stock.`)
-    const restar = () => carrito > 0 ? setCarrito(carrito - 1) : alert(`El número debe ser positivo.`)
+    const restar = () => carrito > 1 ? setCarrito(carrito - 1) : alert(`El número debe ser positivo.`)
     
   return (
     <>
