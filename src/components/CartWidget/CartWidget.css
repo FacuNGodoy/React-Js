@@ -1,0 +1,8 @@
+.numero{
+    margin: 0px;
+}
+
+.numero p{
+    margin: 0px;
+    display: flex;
+}

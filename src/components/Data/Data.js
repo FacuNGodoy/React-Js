@@ -5,6 +5,7 @@ const data = [
         desc: 'Cura 25 HP.',
         image: '../img/potion.png',
         categoryId: 'comun',
+        price: '5'
     },
     {
         id: '2',
@@ -12,6 +13,7 @@ const data = [
         desc: 'Atrapa pokemones comunes.',
         image: '../img/pokeball.png',
         categoryId: 'comun',
+        price: '5'
     },
     {
         id: '3',
@@ -19,6 +21,7 @@ const data = [
         desc: 'Mayor indice de captura que las Pokeball',
         image: '../img/superball.png',
         categoryId: 'raro',
+        price: '10'
     },
     {
         id: '4',
@@ -26,6 +29,7 @@ const data = [
         desc: 'Mayor indice de captura que las Superball',
         image: '../img/ultraball.png',
         categoryId: 'raro',
+        price: '15'
     },
     {
         id: '5',
@@ -33,6 +37,7 @@ const data = [
         desc: 'No falla.',
         image: '../img/masterball.png',
         categoryId: 'ultraRaro',
+        price: '100'
     },
 ];
 

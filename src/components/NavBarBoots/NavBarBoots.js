@@ -1,7 +1,7 @@
-import carrito from '../../Assets/Img/carrito.png'
 import './NavBarBoots.css'
 import LogoPokemon from '../LogoPokemon/LogoPokemon';
 import { Link } from 'react-router-dom';
+import Shop from '../Shop/Shop';
 
 const NavBarBoots = () => {
   return (
@@ -14,7 +14,9 @@ const NavBarBoots = () => {
                     <Link className="nav-link active" to={'/category/comun'}>Comun</Link>
                     <Link className="nav-link active" to={'/category/raro'}>Raro</Link>
                     <Link className="nav-link active" to={'/category/ultraRaro'}>UltraRaro</Link>
-                    <img src={carrito} className="carrito-logo" alt="logo" />
+                    <Link className="nav-link active" to={'/cart'}>
+                      <Shop/>
+                    </Link>
                 </div>
             {/* </div> */}
             <div>

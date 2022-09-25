@@ -1,0 +1,102 @@
+h3{
+    margin:0px;
+}
+
+p{
+    margin:0px;
+}
+
+.carritoTituloVacio{
+    font-family: "pokemon";
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carritoTitulos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "pokemon";
+    border-bottom: 10px;
+    border-style: groove;
+}
+
+.carritoTitulos h2{
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.carritoVacio{
+    font-family: "pokemon";
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carritoLink{
+    font-family: "pokemon";
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+}
+
+.carrito{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "pokemon";
+    height: 150px;
+    font-size: 20px;
+}
+
+.carritoTitulo{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+.carritoImagen{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+.carritoPrecio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+.carritoCantidad{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    align-items: center;
+}
+.carritoBorrar{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+
+.imagen{
+    height: 75px;
+    width: 70px;
+}
+
+.carritoBotBorrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: brown;
+    color: white;
+}

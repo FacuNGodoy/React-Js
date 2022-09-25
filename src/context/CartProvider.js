@@ -8,8 +8,8 @@ export const CartProvider = ({ children }) => {
     
 
     const addToCart = (list, cantidad) =>{
-
-        if (isInCart(list.id)) {
+        const inCart= isInCart(list.id)
+        if (inCart) {
             alert('ya esta en el carrito');
         } else{
             setCart([...cart, {...list, cantidad}]);
@@ -17,11 +17,23 @@ export const CartProvider = ({ children }) => {
         console.log('cart', [...cart, {...list,cantidad}]);
     };
          const isInCart = (id) =>{
-        return cart.some((list) => list.id === id);
+        return cart.find((list) => list.id === id);
          }
 
+         const removeItem = (listID) => {
+            let nuevoArreglo = []; 
+            cart.forEach(list => {
+                if(list.id === listID){
+                    console.log(list);
+                } else {
+                    nuevoArreglo.push(list);
+                }
+            });
+            setCart(nuevoArreglo);
+         };
+
     return (
-        <CartContext.Provider value={{cart, addToCart}}>
+        <CartContext.Provider value={{cart, addToCart, removeItem}}>
             {children}
         </CartContext.Provider>
     );

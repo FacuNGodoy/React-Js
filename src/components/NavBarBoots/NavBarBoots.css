@@ -17,6 +17,10 @@
     display: block;
 }
 
+.navbar-nav{
+    display: flex;
+    align-items: center;
+}
 @font-face {
     font-family: "pokemon";
     src: url(../../Assets/Font/PokemonGb-RAeo.ttf);
