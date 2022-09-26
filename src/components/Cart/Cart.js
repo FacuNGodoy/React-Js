@@ -7,14 +7,14 @@ const Cart = () => {
   const { cart, removeItem } = useContext(CartContext);
   console.log('cart', cart);
 
-  function carritoTotal (){
-    let total=0;
-    cart.forEach(item => {
-      total = total + item.price*item.cantidad
+  const carritoTotal = 
+    cart.map(item =>{
+    let total=0
+    let carritoTotal = total + parseInt(item.cantidad) * parseInt(item.price)
+    console.log(typeof item.price);
+    return carritoTotal
     });
-  }
-
-  carritoTotal();
+  
 
   return (
     <div>
@@ -64,7 +64,7 @@ const Cart = () => {
           ))}
           <div>
             <h3>Total</h3>
-            <p>{carritoTotal()}</p>
+            <p>{carritoTotal}</p>
           </div>
         </>
       )}
