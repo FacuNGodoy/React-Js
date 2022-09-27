@@ -24,9 +24,7 @@ const ItemDetail = ({list}) => {
         <h2 className="item-Tit-Desc">{list.title}</h2>
         <p className="item-Desc">{list.desc}</p>
         <Counter className="contador-Desc" carrito={carrito} setCarrito={setCarrito}/>
-        {/* <Link to={'/cart'}> */}
         <button className="item-bot-Desc" onClick={() => onAdd(list)}>Comprar</button>
-        {/* </Link> */}
       </div>
     </div>
   );

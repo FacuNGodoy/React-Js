@@ -5,16 +5,14 @@ import { Link } from "react-router-dom"
 
 const Cart = () => {
   const { cart, removeItem } = useContext(CartContext);
-  console.log('cart', cart);
 
-  const carritoTotal = 
-    cart.map(item =>{
-    let total=0
-    let carritoTotal = total + parseInt(item.cantidad) * parseInt(item.price)
-    console.log(typeof item.price);
-    return carritoTotal
-    });
-  
+  const getTotalPrice = () => {
+    return cart.reduce(
+      (cont, cartItem) => cont + cartItem.price * cartItem.cantidad,
+      0
+    );
+  };
+
 
   return (
     <div>
@@ -62,9 +60,9 @@ const Cart = () => {
               </div>
             </div>
           ))}
-          <div>
-            <h3>Total</h3>
-            <p>{carritoTotal}</p>
+          <div className="totalCarrito">
+            <h3 className="totalCarritoTitulo">Total</h3>
+            <p className="totalCarritoPrecio">{getTotalPrice()}</p>
           </div>
         </>
       )}

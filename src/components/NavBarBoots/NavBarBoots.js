@@ -18,7 +18,6 @@ const NavBarBoots = () => {
                       <Shop/>
                     </Link>
                 </div>
-            {/* </div> */}
             <div>
               <button className='login mx-5'>Log In</button>
             </div>
