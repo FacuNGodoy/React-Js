@@ -12,7 +12,7 @@ const Cart = () => {
       0
     );
   };
-
+const rutaInicial = '../img/'
 
   return (
     <div>
@@ -47,7 +47,7 @@ const Cart = () => {
                 <h3>{item.title}</h3>
               </div>
               <div className="carritoImagen">
-                <img src={item.image} alt={item.title} className="imagen"></img>
+                <img src={rutaInicial+item.image} alt={item.title} className="imagen"></img>
               </div>
               <div className="carritoPrecio">
                 <p>${item.price}</p>

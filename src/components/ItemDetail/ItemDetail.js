@@ -6,6 +6,7 @@ import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 
 const ItemDetail = ({list}) => {
+  const rutaInicial = '../img/'
   const [carrito, setCarrito] = useState(1)
 
   const { addToCart } = useContext(CartContext);
@@ -19,7 +20,7 @@ const ItemDetail = ({list}) => {
       <div className="item-Card-Desc">
         <Link to='/' className='BotVolver'>Volver</Link>
         <div className='item-Img-Cont-Desc'>
-          <img src={list.image} className="item-Img" alt={list.title}/>
+          <img src={rutaInicial + list.image} className="item-Img" alt={list.title}/>
         </div>
         <h2 className="item-Tit-Desc">{list.title}</h2>
         <p className="item-Desc">{list.desc}</p>
