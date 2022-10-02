@@ -2,17 +2,43 @@ import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import './Cart.css'
 import { Link } from "react-router-dom"
+import { collection, addDoc, getFirestore } from "firebase/firestore"
 
 const Cart = () => {
   const { cart, removeItem } = useContext(CartContext);
 
+
+  //Suma total del carrito
   const getTotalPrice = () => {
     return cart.reduce(
       (cont, cartItem) => cont + cartItem.price * cartItem.cantidad,
       0
     );
   };
-const rutaInicial = '../img/'
+
+  //Crea orden de compra
+  const createOrder = () =>{
+    const db = getFirestore();
+    const order = {
+      buyer: {
+        name: 'Facundo',
+        phone: '445566',
+        email: 'test@test.com'
+      },
+      items: cart,
+      total: getTotalPrice(),
+    };
+    //Crea un id nuevo de la orden generada
+    const query = collection(db, 'orders');
+    addDoc(query, order)
+    .then(({id}) => {
+      console.log(id)
+      alert('Felicidades por tu compra')
+    })
+    .catch(() => alert('Tu compra no pudo ser completada, intentalo mas tarde'))
+  }
+
+  const rutaInicial = '../img/';
 
   return (
     <div>
@@ -63,6 +89,9 @@ const rutaInicial = '../img/'
           <div className="totalCarrito">
             <h3 className="totalCarritoTitulo">Total</h3>
             <p className="totalCarritoPrecio">{getTotalPrice()}</p>
+          </div>
+          <div className="cartComprarCont">
+            <button onClick={createOrder} className="cartComprar">COMPRAR</button>
           </div>
         </>
       )}

@@ -14,21 +14,19 @@ export const CartProvider = ({ children }) => {
         } else{
             setCart([...cart, {...list, cantidad}]);
         };
-        console.log('cart', [...cart, {...list,cantidad}]);
     };
-         const isInCart = (id) =>{
-        return cart.find((list) => list.id === id);
-         }
+    
+    const isInCart = (id) =>{
+        return cart.some((list) => list.id === id);
+    }
 
-         const removeItem = (listID) => {
-            let nuevoArreglo = []; 
-            cart.forEach(list => {
-                if(list.id === listID){
-                    console.log(list);
-                } else {
-                    nuevoArreglo.push(list);
-                }
-            });
+    const removeItem = (listID) => {
+        let nuevoArreglo = []; 
+        cart.forEach(list => {
+            if(list.id !== listID){
+                nuevoArreglo.push(list);
+            }
+        });
             setCart(nuevoArreglo);
          };
 
