@@ -1,4 +1,3 @@
-import logo from './logo.png';
 import './App.css';
 import NavBarBoots from './components/NavBarBoots/NavBarBoots';
 import ItemListContainer from './components/pages/ItemListContainer/ItemListContainer';
@@ -6,6 +5,7 @@ import ItemDetailContainer from './components/pages/ItemDetailContainer/ItemDeta
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Cart from './components/Cart/Cart';
 import {CartProvider} from './context/CartProvider'
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -20,10 +20,7 @@ function App() {
           <Route path="/item/:id" element={<ItemDetailContainer/>} />
           <Route path="/cart" element={<Cart/>}/>
         </Routes>
-        <header className="App-header">
-          {/* <ItemDetailContainer /> */}
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
+        <Footer/>
       </BrowserRouter>
     </CartProvider>
 

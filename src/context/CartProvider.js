@@ -10,7 +10,14 @@ export const CartProvider = ({ children }) => {
     const addToCart = (list, cantidad) =>{
         const inCart= isInCart(list.id)
         if (inCart) {
-            alert('ya esta en el carrito');
+            const newCart = cart.map((cartItem) => {
+                if (cartItem.id === list.id) {
+                    return { ...cartItem, cantidad: cartItem.cantidad + cantidad }
+                } else {
+                    return cartItem
+                }
+            })
+            setCart(newCart)
         } else{
             setCart([...cart, {...list, cantidad}]);
         };
@@ -21,14 +28,8 @@ export const CartProvider = ({ children }) => {
     }
 
     const removeItem = (listID) => {
-        let nuevoArreglo = []; 
-        cart.forEach(list => {
-            if(list.id !== listID){
-                nuevoArreglo.push(list);
-            }
-        });
-            setCart(nuevoArreglo);
-         };
+        setCart(cart.filter((list)=> list.id !== listID))
+    };
 
     return (
         <CartContext.Provider value={{cart, addToCart, removeItem}}>

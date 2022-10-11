@@ -36,6 +36,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 275px;
 }
 .carritoLink{
     font-family: "pokemon";
