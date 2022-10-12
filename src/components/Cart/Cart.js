@@ -93,6 +93,21 @@ const Cart = () => {
           <div className="cartComprarCont">
             <button onClick={createOrder} className="cartComprar">COMPRAR</button>
           </div>
+          <div>
+            <div>
+              <label>Nombre</label>
+              <input type='text' />
+            </div>
+            <div>
+              <label>Correo</label>
+              <input type='text' />
+            </div>
+            <div>
+              <label>Telefono</label>
+              <input type='number' />
+            </div>
+            
+          </div>
         </>
       )}
     </div>
