@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
+import toast, {Toaster} from 'react-hot-toast';
 
 const ItemDetail = ({list}) => {
   const rutaInicial = '../img/'
@@ -13,10 +14,18 @@ const ItemDetail = ({list}) => {
 
   function onAdd(list) {
     addToCart(list, carrito)
+    toast (`Ha agregado ${carrito} ${list.title}`,{
+      style: {
+      borderRadius: '10px',
+      background: '#f66',
+      color: '#fff',
+      },
+    })
   };
 
   return (
     <div className='item-Card-Total-Desc'>
+      <Toaster position="top-right" reverseOrder={false} />
       <div className="item-Card-Desc">
         <Link to='/' className='BotVolver'>Volver</Link>
         <div className='item-Img-Cont-Desc'>

@@ -104,16 +104,24 @@ p{
 
 .totalCarrito{
     display: flex;
-    justify-content: flex-end;
-    padding: 20px;
+    justify-content: center;
+}
+
+.totalCarritoCont{
+    display: flex;
+    justify-content: center;
+    border: double;
+    border-width: 8px;
+    padding: 0px 15px;
 }
 
 .totalCarritoTitulo{
     font-family: "pokemon";
-    margin-right: 100px;
     align-items: center;
     justify-content: center;
     display: flex;
+    margin: 0px 15px;
+    font-size: 20px;
 }
 
 .totalCarritoPrecio{
@@ -121,8 +129,8 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 100px;
-    font-size: 25px;
+    font-size: 20px;
+    margin: 20px 40px;
 }
 
 .cartComprarCont{
@@ -139,4 +147,48 @@ p{
     border-width: 4px;
     border-style: dashed;
     padding: 10px;
+}
+
+.cartVaciarCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cartVaciar{
+    background-color: #f66;
+    color: white;
+    font-family: "pokemon";
+    border-width: 4px;
+    border-style: dashed;
+    padding: 10px;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+.formLabel{
+    margin: 10px;
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "pokemon";
+}
+.formLabel label{
+    width: 100px;
+}
+.formInput{
+    width: 150px;
+}
+.formularioBorde{
+    border-style: double;
+    border-width: 8px;
+}
+.cartComprarBoton{
+    display: flex;
+    justify-content: center;
 }
