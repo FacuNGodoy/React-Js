@@ -1,8 +1,7 @@
 import './Counter.css'
 import toast, {Toaster} from 'react-hot-toast';
 
-const Counter = ({carrito, setCarrito}) => {
-    const stock = 10
+const Counter = ({carrito, setCarrito, stock}) => {
 
     const sumar = () => carrito <= stock -1 ? setCarrito(carrito + 1) :
     toast (`Se alcanzó el límite de stock`,{

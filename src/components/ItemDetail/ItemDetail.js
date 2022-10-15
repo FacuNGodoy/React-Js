@@ -33,7 +33,7 @@ const ItemDetail = ({list}) => {
         </div>
         <h2 className="item-Tit-Desc">{list.title}</h2>
         <p className="item-Desc">{list.desc}</p>
-        <Counter className="contador-Desc" carrito={carrito} setCarrito={setCarrito}/>
+        <Counter className="contador-Desc" carrito={carrito} stock={list.stock} setCarrito={setCarrito}/>
         <button className="item-bot-Desc" onClick={() => onAdd(list)}>Comprar</button>
       </div>
     </div>

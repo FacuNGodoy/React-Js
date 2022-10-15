@@ -134,6 +134,7 @@ const Cart = () => {
           </div>
           <div className="formulario">
             <div className="formularioBorde">
+              <form>
               <div className="formLabel">
                 <label>Nombre</label>
                 <input className="formInput" name="name" type='text' value={order.buyer.name} onChange={formulario}/>
@@ -146,6 +147,7 @@ const Cart = () => {
                 <label>Telefono</label>
                 <input className="formInput" name="phone" type='number' value={order.buyer.phone} onChange={formulario}/>
               </div>
+              </form>
               <div className="cartComprarBoton">
                 <button onClick={createOrder} className="cartComprar">COMPRAR</button>
               </div>
