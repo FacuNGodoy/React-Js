@@ -13,6 +13,9 @@
 
 ---
 
+<img src="src/components/img/Compra.gif" alt="gif">
+
+---
 ### Built With :
 
 - :white_check_mark: HTML5, CSS.
@@ -21,3 +24,10 @@
 - :white_check_mark: Swal.
 - :white_check_mark: Toastify.
 
+---
+
+### About the app :
+
+<div>
+  <h2>This project is based on the gameboy pokemon game. This game marks the childhood of many people and is a project made with love and dedication.</h2>
+</div>
