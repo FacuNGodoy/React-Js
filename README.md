@@ -21,9 +21,3 @@
 - :white_check_mark: Swal.
 - :white_check_mark: Toastify.
 
-### About the proyect
-
-<div>
-    <h2>This was a React Js project made for CoderHouse. It was a project inspired by the gameboy pokemon game, a game that influenced the childhood of many.
-    Today I can do this project with love and dedication.</h2>
-</div>
