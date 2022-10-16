@@ -6,6 +6,7 @@ import { collection, addDoc, getFirestore, updateDoc, doc } from "firebase/fires
 import moment from 'moment';
 import { useNavigate } from "react-router-dom"
 import swal from 'sweetalert';
+import toast, { Toaster} from 'react-hot-toast';
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Cart = () => {
   const [order, setOrder] = useState({
     buyer: {
       name: '',
-      phone: 0,
+      phone: '',
       email: ''
     },
     items: cart,
@@ -24,6 +25,18 @@ const Cart = () => {
 
   //Crea orden de compra
   const createOrder = () =>{
+    const inpObj = document.getElementsByName("name")[0];
+    const inpObj1 = document.getElementsByName("email")[0];
+    const inpObj2 = document.getElementsByName("phone")[0];
+    const isFormValid = inpObj.checkValidity() && inpObj1.checkValidity() && inpObj2.checkValidity();
+    if(!isFormValid){
+      toast (`Revise que todos los campos del formulario esten completos.`,{
+        style: {
+        borderRadius: '10px',
+        background: '#f66',
+        color: '#fff',
+        }})
+    } else{
     //Crea un id nuevo de la orden generada
     const query = collection(db, 'orders');
     addDoc(query, order)
@@ -31,14 +44,14 @@ const Cart = () => {
       console.log(id)
       updateStockProducts();
       swal({
-        title:'Felicitaciones',
-        text: 'por tu compra',
+        title:'¡Felicitaciones!',
+        text: 'Tu pedido se realizo con exito.',
         icon: "success",
         timer: 3000,
       })
     })
     .catch(() => alert('Tu compra no pudo ser completada, intentalo mas tarde'));
-  };
+  };};
 
   const updateStockProducts = () => {
     cart.forEach(product => {
@@ -79,6 +92,7 @@ const Cart = () => {
 
   return (
     <div>
+      <Toaster position="top-right" reverseOrder={false} />
       <h1 className="carritoTituloVacio">Su carrito</h1>
      
       {cart.length === 0 ? (
@@ -137,20 +151,20 @@ const Cart = () => {
               <form>
                 <div className="formLabel">
                   <label>Nombre</label>
-                  <input className="formInput" name="name" type='text' value={order.buyer.name} onChange={formulario}/>
+                  <input id="PRUEBA" className="formInput validacion1" name="name" placeholder="Su nombre" required type='text' value={order.buyer.name} onChange={formulario}/>
                 </div>
                 <div className="formLabel">
                   <label>Correo</label>
-                  <input className="formInput" name="email" type='text' value={order.buyer.email} onChange={formulario}/>
+                  <input id="PRUEBA2" className="formInput validacion2" name="email" type='text' required placeholder="Email" value={order.buyer.email} onChange={formulario}/>
                 </div>
                 <div className="formLabel">
                   <label>Telefono</label>
-                  <input className="formInput" name="phone" type='number' value={order.buyer.phone} onChange={formulario}/>
-                </div>
-                <div className="cartComprarBoton">
-                  <button onClick={createOrder}  className="cartComprar">COMPRAR</button>
+                  <input className="formInput validacion3" name="phone" type='number' required placeholder="Telefono" value={order.buyer.phone} onChange={formulario}/>
                 </div>
               </form>
+              <div className="cartComprarBoton">
+                  <button onClick={createOrder} className="cartComprar">COMPRAR</button>
+              </div>
             </div>
             
           </div>
