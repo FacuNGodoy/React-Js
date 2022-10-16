@@ -151,15 +151,15 @@ const Cart = () => {
               <form>
                 <div className="formLabel">
                   <label>Nombre</label>
-                  <input id="PRUEBA" className="formInput validacion1" name="name" placeholder="Su nombre" required type='text' value={order.buyer.name} onChange={formulario}/>
+                  <input className="formInput " name="name" placeholder="Su nombre" required type='text' value={order.buyer.name} onChange={formulario}/>
                 </div>
                 <div className="formLabel">
                   <label>Correo</label>
-                  <input id="PRUEBA2" className="formInput validacion2" name="email" type='text' required placeholder="Email" value={order.buyer.email} onChange={formulario}/>
+                  <input className="formInput" name="email" type='text' required placeholder="Email" value={order.buyer.email} onChange={formulario}/>
                 </div>
                 <div className="formLabel">
                   <label>Telefono</label>
-                  <input className="formInput validacion3" name="phone" type='number' required placeholder="Telefono" value={order.buyer.phone} onChange={formulario}/>
+                  <input className="formInput" name="phone" type='number' required placeholder="Telefono" value={order.buyer.phone} onChange={formulario}/>
                 </div>
               </form>
               <div className="cartComprarBoton">
